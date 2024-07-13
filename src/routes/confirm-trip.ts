@@ -6,7 +6,7 @@ import { getMailClient } from "../lib/mail";
 import { dayjs } from '../lib/day'
 import nodemailer from 'nodemailer'
 
-export async function ConfirmTrip(app: FastifyInstance) {
+export async function confirmTrip(app: FastifyInstance) {
     app.withTypeProvider<ZodTypeProvider>().get('/trips/:tripId/confirm', {
         schema: {
             params: z.object({
